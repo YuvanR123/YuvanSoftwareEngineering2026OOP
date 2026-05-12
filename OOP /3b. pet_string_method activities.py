@@ -7,8 +7,22 @@ class Pet:
         self.name = name
         self.category = category
         self.age = age
-        self.ccard = 'unknown'
-        self.vaccinated = False
+        self.ccard = 'Unknown'
+        self.vaccinated = 'Unknown'
+    def __str__(self):
+        payment_status = 'Unknown'
+        if len(self.ccard) == 19: 
+         payment_status = 'Known'
+        pet_status = 'Name: ' + self.name + '\nName: ' + self.category + '\nAge: ' + str(self.age) + '\nVaccination: ' + self.vaccinated + '\nPayment Status: ' + payment_status
+        return pet_status
+        
+        
+p1 = Pet('Dobby', 'Dog', 6)
+p1.ccard = '5425 3345 2244 6673'
+print(p1)
+
+    
+
 
 
 

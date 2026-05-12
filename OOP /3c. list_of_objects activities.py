@@ -8,7 +8,23 @@ class Pet:
         self.category = category
         self.age = age
         self.ccard = 'unknown'
-        self.vaccinated = False
+        self.vaccinated = 'unknown'
+    def __str__(self):
+        payment_status = 'Unknown'
+        if len(self.ccard) == 19: 
+         payment_status = 'Known'
+        pet_status = 'Name: ' + self.name + '\nName: ' + self.category + '\nAge: ' + str(self.age) + '\nVaccination: ' + self.vaccinated + '\nPayment Status: ' + payment_status
+        return pet_status
+p1 = Pet('Bonnie' , 'Dog')
+p2 = Pet('Foxy', 'Cat', 7)
+p3 = Pet(category = 'Rabbit', name = 'Dobby', age = 12)
+p4 = Pet(name = 'Bob', age = 2, category = 'Bird')
+p1.ccard = '1234 5456 9643 2467'
+pets = [p1,p2,p3,p4]
+for pet in pets:
+   pet.vaccinated = str(True)
+   print(pet)
+   print('')
 
 
 

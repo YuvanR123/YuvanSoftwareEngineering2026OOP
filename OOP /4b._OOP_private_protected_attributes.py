@@ -4,12 +4,12 @@
 
 class Pet:
     def __init__(self, name, category, breed = None, age = 0):
-        self._name = name
+        self._name = name #Protected attribute for name using single underscore
         self.__category = category
-        self.__breed = breed
+        self.__breed = breed #Private attribute for breed using double underscore
         self.age = age
         self.__ccard = 'unknown'
-        self.vaccinated = False
+        self.vaccinated = 'unknown'
 
     def have_birthday(self):
         self.age += 1
@@ -23,6 +23,7 @@ class Pet:
         return my_status
 
 p1 = Pet(name = 'Bonnie', category = 'Cat', age = 10)
+p1.__category = 'Dog' #Testing to see whether this line changes the private attribute set for the category (Cat), it did not change (meaning )
 print(p1)
 
 #ACTIVITIES:

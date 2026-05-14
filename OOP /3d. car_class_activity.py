@@ -4,19 +4,30 @@
 # - Create a __str__ method that prints make and model
 
 class Car:
-    def __init__(self,make,model,year,price=None):
+    def __init__(self,make,model,year, wheels, price = None):
         self.make = make
         self.model = model
         self.year = year
         self.price = price
+        self.for_sale = 'Unknown'
+        self.wheels = wheels
+        
 
-    def __str__(self):
+    def __str__(self): 
+        return '\nMake :' + self.make + '\nModel :' + self.model + '\nYear :' + self.year + '\nWheels: ' + self.wheels + '\nPrice: ' + str(self.price) + '\nSale: ' + self.for_sale 
+
+        
+
+c1 = Car(make = 'Mazda', wheels = 'GTR Wheels', model = '6', year = '2005')
+c1.for_sale = 'For Sale'
+c2 = Car('Volvo', 'XC40', '2022', 'Volvo Wheels', '$100,000')
+c2.for_sale = 'For Sale'
+c3 = Car('Lamborghini', 'Aventador', '2012', 'Sports Car Wheels', '$312,000' )
+c3.for_sale = 'Not For Sale'
 
 
-c1 = Car('Mazda','6',2005)
 
-
-cars = [c1]
+cars = [c1,c2,c3]
 
 for car in cars:
     print(car)

@@ -7,12 +7,38 @@ class Pet:
         self.name = name
         self.category = category
         self.age = age
-        self.ccard = 'unknown'
+        self.ccard = 'Unknown'
         self.vaccinated = False
-        self.account_balance = 0
-    
+        self.account_balance = 'Unknown'
+
+    def vaccinate(self):
+        self.vaccinated = True
+
+    def __str__(self):
+        if self.vaccinated:
+            return '\nName: ' + self.name + '\nType: ' + self.category + '\nAge: ' + str(self.age) + '\nVaccinate: ' + 'Bonnie is vaccinated'
+        else:
+            return '\nName: ' + self.name + '\nType: ' + self.category + '\nAge: ' + str(self.age) + '\nVaccinate: ' + 'Bonnie is not vaccinated. Please vaccinate her now'
+        
+    def human_age(self):
+        if self.category == 'Dog':
+            print(self.name,'human age: ', self.age*7)
+        elif self.category == 'Cat':
+            print(self.name,'human age: ',self.age*6)
+        else:
+            print(self.name,'human age is unknown')
+
     def have_birthday(self):
         self.age += 1
+    
+    def clear_account_balance(self):
+        self.account_balance = 0
+
+p1 = Pet('Bonnie', 'Cat', 12,)
+p1.have_birthday()
+p1.vaccinate()
+print(p1)
+p1.human_age()
     
     
 

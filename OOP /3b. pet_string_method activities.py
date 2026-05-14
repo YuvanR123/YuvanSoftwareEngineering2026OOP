@@ -13,12 +13,13 @@ class Pet:
         payment_status = 'Unknown'
         if len(self.ccard) == 19: 
          payment_status = 'Known'
-        pet_status = 'Name: ' + self.name + '\nName: ' + self.category + '\nAge: ' + str(self.age) + '\nVaccination: ' + self.vaccinated + '\nPayment Status: ' + payment_status
+        pet_status = 'Name: ' + self.name + '\nCategory: ' + self.category + '\nAge: ' + str(self.age) + '\nVaccination: ' + self.vaccinated + '\nPayment Status: ' + payment_status
         return pet_status
         
         
 p1 = Pet('Dobby', 'Dog', 6)
 p1.ccard = '5425 3345 2244 6673'
+p1.vaccinated = 'Vaccinated'
 print(p1)
 
     

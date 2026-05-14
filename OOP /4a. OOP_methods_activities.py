@@ -37,6 +37,7 @@ class Pet:
 p1 = Pet('Bonnie', 'Cat', 12,)
 p1.have_birthday()
 p1.vaccinate()
+p1.clear_account_balance()
 print(p1)
 p1.human_age()
     

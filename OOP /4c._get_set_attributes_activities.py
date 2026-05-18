@@ -7,9 +7,14 @@ class Pet:
         self.__ccard = 'unknown'
         self.vaccinated = False
         self.weight = 0
-
-   
+    
+    def get_weight(self):
+        return self.weight
+    
+    def set_weight(self):
+        if self.weight == int or float
+        
 
 #ACTIVITIES:
 #1. Add attribute weight and write a getter method for weight
-#2. Add setter method or weight and make sure it is a positive number (integer or float)
+#2. Add setter method on weight and make sure it is a positive number (integer or float)

@@ -12,7 +12,8 @@ class Pet:
         return self.weight
     
     def set_weight(self):
-        if self.weight == int or float
+        if self.weight == int or float:
+         return self.weight
         
 
 #ACTIVITIES:

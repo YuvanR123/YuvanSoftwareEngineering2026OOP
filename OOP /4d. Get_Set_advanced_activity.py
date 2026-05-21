@@ -4,7 +4,7 @@
 class Pet:
     def __init__(self, name, category, breed = None, age = 0):
         self._name = name
-        self.__category = category
+        self.__category = category #If you include things outside of the parameters, they will still work when you mention it
         self.__breed = breed
         self.age = age
         self.__ccard = 'unknown'

@@ -19,7 +19,7 @@ class Car:
         
 
 c1 = Car(make = 'Mazda', wheels = 'GTR Wheels', model = '6', year = '2005')
-c1.for_sale = 'For Sale'
+c1.for_sale = 'For Sale' #For things that are not inside the parameter, you must change it seperately like this (since for sale isn't in the starting parameter)
 c2 = Car('Volvo', 'XC40', '2022', 'Volvo Wheels', '$100,000')
 c2.for_sale = 'For Sale'
 c3 = Car('Lamborghini', 'Aventador', '2012', 'Sports Car Wheels', '$312,000' )
